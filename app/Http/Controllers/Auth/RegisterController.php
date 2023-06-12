@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Auth;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -34,6 +35,13 @@ class RegisterController extends Controller
      *
      * @return void
      */
+    protected function redirectTo(){
+        if( Auth::user()->role =="admin"){
+            return route('admin');
+        } elseif(Auth::user()->role =="user"){
+            return route('user');
+        }
+    }
     public function __construct()
     {
         $this->middleware('guest');

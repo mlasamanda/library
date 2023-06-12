@@ -85,6 +85,7 @@ class AdminCrude extends Controller
             'email' => 'required',
             'nation' => 'required',
             'mobile' => 'required',
+            'role'=>'required',
         ]);
         $student = User::find($id);
         $student->fname = $request->fname;
@@ -92,6 +93,7 @@ class AdminCrude extends Controller
         $student->email = $request->email;
         $student->nation = $request->nation;
         $student->mobile= $request->mobile;
+        $student->role=$request->role;
         $student->update();
         return redirect()->route('admin.index')
             ->with('success','Details Has Been updated successfully');

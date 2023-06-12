@@ -1,4 +1,4 @@
-@extends('home')
+@extends('customer')
 @section('content')
 < class="container mt-2">
 <div class="row">

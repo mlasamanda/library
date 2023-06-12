@@ -21,7 +21,7 @@ class User
             return redirect()->route('login');
         }
         if (Auth::user()->role == 'admin') {
-            redirect()->route('admin.index');
+            redirect()->route('admin');
         }
 
         if (Auth::user()->role == 'user') {

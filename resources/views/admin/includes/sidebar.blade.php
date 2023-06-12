@@ -23,57 +23,23 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="{{route('admin.index')}}" class="nav-link active">
+            <a href="{{route('admin.index')}}">
+              <p>
+              <i class="fas fa-user fa-fw"></i>
+                Users Manangement
+
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="{{route('book.index')}}">
+              <p>
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Home
+                Books Manangement
 
               </p>
             </a>
           </li>
-
-          <li class="nav-item has-treeview">
-            <a href="{{route('admin.index')}}" class="nav-link">
-              <i class="fa fa-address-card"></i>
-              <p>
-              User Manangement
-              </p>
-            </a>
-           </li>
-           <li class="nav-item has-treeview">
-            <a href="" class="nav-link">
-              <i class="fas fa-angle-left right"></i>
-              <p>
-                Books Management
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="{{route('book.index')}}" class="nav-link">
-                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-edit"></i>
-                  <p>Books</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{route('six.index')}}" class="nav-link">
-                   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="fas fa-edit"></i>
-                  <p>Orders</p>
-                </a>
-              </li>
-        
-            </ul>
-          </li>  
-          <li class="nav-item has-treeview">
-            <a href=" " class="nav-link">
-              <i class="nav-icon fas fa-key"></i>
-              <p>
-                change Password
-              </p>
-            </a>
-          </li>
-
-
-
           <li class="nav-item">
             <a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

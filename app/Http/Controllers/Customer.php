@@ -23,7 +23,7 @@ class Customer extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

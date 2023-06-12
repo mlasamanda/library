@@ -14,7 +14,7 @@ class BookuserController extends Controller
     public function index()
     {
         $students= Book::orderBy('id','asc')->paginate(5);
-        return view('bookuser.index', compact('students',));
+        return view('bookuser.index', compact('students'));
     }
 
     /**
@@ -24,7 +24,7 @@ class BookuserController extends Controller
      */
     public function create()
     {
-        //
+      
     }
 
     /**
@@ -35,9 +35,7 @@ class BookuserController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
-
     /**
      * Display the specified resource.
      *
@@ -46,7 +44,8 @@ class BookuserController extends Controller
      */
     public function show($id)
     {
-        //
+    $students=Book::find($id);
+    return view('bookuser.show')->with('students',$students);
     }
 
     /**
@@ -57,7 +56,7 @@ class BookuserController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
@@ -69,7 +68,7 @@ class BookuserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

@@ -4,7 +4,7 @@
 <div class="row">
 <div class="col-lg-12 margin-tb">
 <div class="pull-left">
-<h2>Admin Pannel</h2>
+<h3>Book Manangement</h3>
 </div>
 <div class="pull-right mb-2">
 <a class="btn btn-success" href="{{ route('book.create') }}">Add New Book</a>

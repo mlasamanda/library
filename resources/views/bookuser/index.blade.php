@@ -7,7 +7,6 @@
 <h2>Book Library</h2>
 </div>
 <div class="pull-right mb-2">
-<a class="btn btn-success" href="{{ route('sugg.index') }}">Suggest New Book</a>
 </div>
 </div>
 </div>
@@ -32,8 +31,8 @@
 <td>{{ $student->author }}</td>
 <td>{{ $student->year}}</td>
 <td>
-<form action="{{route('book.destroy',$student->id)}}" method="POST" enctype="multipart/form-data">
-    <a class="btn btn-secondary" href="{{ route('book.show',$student->id) }}">View</a>
+<form action="{{route('bookuser.destroy',$student->id)}}" method="POST" enctype="multipart/form-data">
+    <a class="btn btn-secondary" href="{{ route('bookuser.show',$student->id) }}">View</a>
     @csrf
 @method('DELETE')
     

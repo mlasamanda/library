@@ -35,3 +35,10 @@
         <script src="{{ asset('assets/plugins/chart.js/Chart.min.js') }}"></script>
 
 
+        <script src="{{ asset('assets/jsmin.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/js/scripts.js') }}"></script>
+        <script src="{{ asset('assets/jschart.js')}}" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/assets/demo/chart-area-demo.js') }}"></script>
+        <script src="{{ asset('assets/assets/demo/chart-bar-demo.js')}}"></script>
+        <script src="{{ asset('assets/jsnpm.js') }}" crossorigin="anonymous"></script>
+        <script src="{{ asset('assets/js/datatables-simple-demo.js') }}"></script>

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Booksugg;
-class suggestion extends Controller
+
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class suggestion extends Controller
      */
     public function index()
     {
-        $students= Booksugg::orderBy('id','asc')->paginate(5);
-        return view('suggestionBook.index', compact('students',));
+     return view('home');
     }
 
     /**
@@ -25,7 +24,7 @@ class suggestion extends Controller
      */
     public function create()
     {
-     return view('suggestionBook.create');
+        //
     }
 
     /**
@@ -36,19 +35,7 @@ class suggestion extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-         'name'=>'required',
-         'author'=>'required',
-         'year'=>'required',
-        ]);
-        $student=new Booksugg();
-        $student->name=$request->name;
-        $student->author=$request->author;
-        $student->type=$request->type;
-        $student->year=$request->year;
-        $student->save();
-        return redirect()->route('sugg.index')
-        ->with('success',"successfully saved");
+        //
     }
 
     /**

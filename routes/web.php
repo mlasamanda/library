@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminCrude;
 use App\Http\Controllers\FourResult;
@@ -28,7 +27,7 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
  
-Route::resource('admin', AdminCrude::class)->middleware('admin');
+Route::get('/admin', [AdminController::class,'index'])->name('admin')->middleware('admin');
 Route::get('/user', [Customer::class, 'index'])->name('user')->middleware('user');
 Route::get('/SixResult', [App\Http\Controllers\SixController::class, 'six'])->name('formSix');
 Route::post('/six_result', [App\Http\Controllers\SixController::class, 'store'])->name('form_six');
@@ -41,7 +40,7 @@ Route::post('/changepassword', [App\Http\Controllers\ChangePassword::class, 'sto
 Route::get('/insert', [App\Http\Controllers\PersonController::class, 'person'])->name('person');
 Route::post('/create', [App\Http\Controllers\PersonController::class, 'store'])->name('personalinfo');
 Route::get('/review_submission', [App\Http\Controllers\DiplayInfo::class, 'display'])->name('revsub');
-
+Route::resource('admin',AdminCrude::class);
 Route::resource('sugg', suggestion::class);
 Route::resource('apply',ApplyController::class);
 Route::resource('four', FourResult::class);

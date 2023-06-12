@@ -29,5 +29,13 @@
         <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
         <link rel="stylesheet" href="csfile/person.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="{{ asset('assets/simple.css') }}" rel="stylesheet" />
+        <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" />
+        <script src="{{ asset('assets/awesome.js') }}" crossorigin="anonymous"></script>
       </div>
         

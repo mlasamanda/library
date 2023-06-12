@@ -1,4 +1,4 @@
-@extends('home')
+@extends('Customer')
 @section('content')
 <div class="container mt-2">
 <div class="row">
@@ -7,7 +7,7 @@
 <h2>Book Store</h2>
 </div>
 <div class="pull-right mb-2">
-<a class="btn btn-success" href="{{ route('book.create') }}">Suggest new book </a>
+<a class="btn btn-success" href="{{ route('sugg.create') }}">Suggest new book </a>
 </div>
 </div>
 </div>
