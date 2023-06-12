@@ -35,11 +35,12 @@ class RegisterController extends Controller
      *
      * @return void
      */
+    
     protected function redirectTo(){
         if( Auth::user()->role =="admin"){
-            return route('admin');
+            return RouteServiceProvider::ADMIN;
         } elseif(Auth::user()->role =="user"){
-            return route('user');
+            return RouteServiceProvider::HOME;
         }
     }
     public function __construct()
