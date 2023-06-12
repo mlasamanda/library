@@ -24,6 +24,23 @@
 <th>Year of Publisher</th>
 <th width="280px">Action</th>
 </tr>
+@foreach ($students as $student)
+<tr>
+<td>{{ $student->id }}</td>
+<td>{{ $student->name }}</td>
+<td>{{ $student->author }}</td>
+<td>{{ $student->year}}</td>
+<td>
+<form action="{{route('book.destroy',$student->id)}}" method="POST" enctype="multipart/form-data">
+<a class="btn btn-primary" href="{{ route('book.edit',$student->id) }}">Edit</a>
+    <a class="btn btn-secondary" href="{{ route('book.show',$student->id) }}">View</a>
+    @csrf
+@method('DELETE')
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+</td>
+</tr>
+@endforeach
 </table>
 {!! $students->links() !!}
 @endsection
