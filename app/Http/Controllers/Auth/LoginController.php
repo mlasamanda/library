@@ -27,11 +27,11 @@ class LoginController extends Controller
      * @var string
      */
     
-    protected function redirectTo(){
+     protected function redirectTo(){
         if( Auth::user()->role =="admin"){
-            return route('admin');
+            return RouteServiceProvider::ADMIN;
         } elseif(Auth::user()->role =="user"){
-            return route('user');
+            return RouteServiceProvider::HOME;
         }
     }
 
