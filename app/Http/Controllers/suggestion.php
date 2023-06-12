@@ -44,7 +44,6 @@ class suggestion extends Controller
         $student=new Booksugg();
         $student->name=$request->name;
         $student->author=$request->author;
-        $student->type=$request->type;
         $student->year=$request->year;
         $student->save();
         return redirect()->route('sugg.index')
